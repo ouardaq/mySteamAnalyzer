@@ -30,38 +30,33 @@ Prerequisites
 
 1. Clone the repository:
 
-`git clone https://github.com/ouarda101/mySteamAnalyzer.git`
-
-2. Get Your Steam Web API Key :
-   
-* Go to the Steam Web API Key registration page.
-* Log in with your Steam account.
-* Register a new key by entering a domain name (you can use localhost for local development).
-* Copy the generated API key.
-
-3. Configure the Backend :
-   
-* Open the `app.py` file.
-* Find the `STEAM_API_KEY` variable and paste your API key into the empty quotes.
-* Find the `STEAM_ID` variable and replace the placeholder ID with your 64-bit Steam ID. You can find this using a tool like SteamID.io.
+`git clone https://github.com/ouardaq/mySteamAnalyzer.git`
 
 
-4. Run the Backend Server
+2. Set up environment variables:
 
-* Install the required Python packages:
+Create a `.env` file in the project root:
+```
+STEAM_API_KEY=your_steam_api_key_here
+STEAM_ID=your_64bit_steam_id_here
+```
 
-`pip install Flask requests flask-cors`
+- To get your Steam API key, visit [steamcommunity.com/dev/apikey](https://steamcommunity.com/dev/apikey)
+- To find your 64-bit Steam ID, use [steamid.io](https://steamid.io)
 
-* Run the Flask server from your terminal:
+3. Run the Backend Server
 
-`python app.py`
+```bash
+cd backend
+pip install -r ../requirements.txt
+python app.py
+```
 
 The server will start on http://127.0.0.1:5000.
 
-5. View the Frontend :
+4. Open the frontend:
 
-* Open the index.html file in your web browser.
-* The frontend will automatically connect to the running backend and display your game library.
+Open `frontend/index.html` in your browser.
 
   
 ### 🖼️  Demo
