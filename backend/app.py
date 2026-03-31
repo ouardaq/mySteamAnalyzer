@@ -2,7 +2,13 @@ import requests
 import json
 from flask import Flask, jsonify
 from flask_cors import CORS 
+from dotenv import load_dotenv
+import os
 
+load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
+
+STEAM_API_KEY = os.getenv("STEAM_API_KEY")
+STEAM_ID = os.getenv("STEAM_ID")
 app = Flask(__name__)
 CORS(app) 
 
